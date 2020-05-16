@@ -79,6 +79,16 @@ windowsの人は[こちら](https://github.com/takonasu/SlideBukkonuki/tree/mast
 `% ./SlideBukkonuki -i karaoke.mp4 -t 1 -f 100`
 のように閾値を1にしてあげれば、変化の割合が1を超えているものに関しては保存してくれます。
 
+### トリミングについて
+![トリミングの説明](https://work.takonasu.net/BukkonukiImg1.png)
+
+トリミングの際に指定する数値は上の図の「トリミングするピクセル幅」と描かれているところです。
+横幅を指定されたアスペクト比（4:3または16:9)で自動計算するので、横幅の自動計算結果が動画幅を超える場合はエラーとなります。
+エラーが出た場合トリミング指定を0にしてみてください。
+なお、動画のアスペクト比が16:9で授業スライドが16:9でトリミングする事は想定していません。
+
+基本的には、この図のように動画が16:9で授業スライドが4:3の時を想定している機能です。    
+**よくわからない人は0を指定しておけば問題はない**です。
 
 ### 何で閾値を指定する必要があるの？
 このプログラムは動画の変化を確認してスライドを切り替えたか判定しています。
@@ -89,6 +99,7 @@ windowsの人は[こちら](https://github.com/takonasu/SlideBukkonuki/tree/mast
 動画から画像抽出：https://kisqragi.hatenablog.com/entry/2019/11/02/130921   
 相談しながら折り紙折ってた人: [おしゅん](https://twitter.com/uk_osy)  
 Windows版のビルド： [しゃちぽこ](https://twitter.com/Shachihoko6)  
+Mac GUI版 ： [takpika](https://twitter.com/takpika0308),[SGO](https://twitter.com/sgo_ITF) 
 
 ## その他
 作者はプログラミングマジで苦手でC++も114514年ぶりくらいに触ったのでソースコードには稚拙な部分があります。
